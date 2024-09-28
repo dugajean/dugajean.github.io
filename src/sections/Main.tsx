@@ -7,8 +7,8 @@ export const Main = () => (
       <p>
         I'm an experienced Senior Software Engineer with <strong>10 years</strong> of experience in
         delivering products that serve millions of users. Specializing in frontend architecture and
-        engineering leadership, with a strong focus on reducing technical debt, improving
-        collaboration, and enhancing system scalability.
+        engineering leadership, with a strong focus on accessibility, user experience, and creating
+        scalable frontend code bases.
       </p>
     </div>
     <div className="flex flex-col gap-4">
