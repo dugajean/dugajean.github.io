@@ -100,6 +100,10 @@ h6 {
   font-family: "Mate", sans-serif;
 }
 
+strong {
+  @apply font-semibold;
+}
+
 .skills-list li:not(:last-of-type)::after {
   content: " / ";
 }

@@ -1,18 +1,18 @@
 import { AtSymbolIcon, MapPinIcon } from "@heroicons/react/24/outline";
 
-export const Sidebar = () => {
-  return (
-    <section className="bg-indigo-800 bg-opacity-70 w-full md:w-1/4 px-12 py-12 md:py-24 md:rounded-tl-lg md:rounded-bl-lg">
-      <div className="flex flex-row-reverse md:flex-col md:sticky md:top-16 md:items-center text-white gap-4">
-        <div className="lg:w-32 h-40">
-          <img
-            loading="lazy"
-            src="/self.webp"
-            alt="Dugi's photo"
-            className="w-40 md:w-24 lg:w-32 h-40 md:h-24 lg:h-32 rounded-full"
-          />
-        </div>
-        <div className="flex flex-col gap-8">
+export const Sidebar = () => (
+  <aside className="bg-indigo-800 bg-opacity-70 w-full md:w-1/4 px-12 py-12 md:py-24 md:rounded-tl-lg md:rounded-bl-lg">
+    <div className="flex flex-col md:sticky md:top-16 md:items-center text-white gap-4">
+      <div className="w-40 md:w-24 lg:w-32 h-40 md:h-24 lg:h-32 self-center md:self-start">
+        <img
+          loading="lazy"
+          src="/self.webp"
+          alt="Dugi's photo"
+          className="block w-full h-full rounded-full"
+        />
+      </div>
+      <div className="flex flex-col gap-8">
+        <div className="flex justify-between md:flex-col gap-8">
           <section>
             <h1 className="text-2xl font-bold">Dugi Surdulli</h1>
             <p className="uppercase text-xs font-light">Senior Software Engineer</p>
@@ -37,26 +37,27 @@ export const Sidebar = () => {
               </p>
             </div>
           </section>
-          <section className="flex flex-col gap-4">
-            <h2 className="text-xl font-bold">Skills</h2>
-            <ul className="flex gap-2 flex-wrap skills-list font-extralight">
-              <li>React</li>
-              <li>TypeScript</li>
-              <li>Node.js</li>
-              <li>JavaScript</li>
-              <li>PHP</li>
-              <li>Go</li>
-              <li>Next.js</li>
-              <li>TanStack Query</li>
-              <li>React Hook Form</li>
-              <li>Redux</li>
-              <li>Jotai</li>
-              <li>Tailwind</li>
-              <li>Git</li>
-            </ul>
-          </section>
         </div>
+        <section className="flex flex-col gap-4">
+          <h2 className="text-xl font-bold">Skills</h2>
+          <ul className="flex gap-2 flex-wrap skills-list font-extralight">
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>Node.js</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>Go</li>
+            <li>Next.js</li>
+            <li>TanStack Query</li>
+            <li>React Hook Form</li>
+            <li>Redux</li>
+            <li>Jotai</li>
+            <li>Zod</li>
+            <li>Tailwind</li>
+            <li>Git</li>
+          </ul>
+        </section>
       </div>
-    </section>
-  );
-};
+    </div>
+  </aside>
+);
