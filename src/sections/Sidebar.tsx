@@ -3,7 +3,7 @@ import { AtSymbolIcon, MapPinIcon } from "@heroicons/react/24/outline";
 export const Sidebar = () => {
   return (
     <section className="bg-indigo-800 bg-opacity-70 w-full md:w-1/4 px-12 py-12 md:py-24 md:rounded-tl-lg md:rounded-bl-lg">
-      <div className="flex flex-row-reverse md:flex-col md:sticky md:top-12 md:items-center text-white gap-4">
+      <div className="flex flex-row-reverse md:flex-col md:sticky md:top-16 md:items-center text-white gap-4">
         <img
           src="/self.jpg"
           alt="Dugi portrait"

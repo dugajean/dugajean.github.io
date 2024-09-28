@@ -18,10 +18,10 @@ const Experience = ({ children }: PropsWithSlots) => {
     <article className="flex flex-col gap-2">
       <h3 className="text-lg font-bold">{slots.title}</h3>
       <p className="text-sm text-gray-400 uppercase">{slots.duration}</p>
-      <p className="flex flex-col gap-1">
-        {slots.description}
+      <div className="flex flex-col gap-1">
+        <p>{slots.description}</p>
         <ul className="list-disc ml-4">{slots.bullet}</ul>
-      </p>
+      </div>
     </article>
   );
 };

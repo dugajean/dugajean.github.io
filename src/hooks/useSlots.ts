@@ -1,11 +1,4 @@
-import {
-  Children,
-  FC,
-  JSXElementConstructor,
-  PropsWithChildren,
-  ReactElement,
-  isValidElement
-} from "react";
+import { Children, FC, PropsWithChildren, ReactElement, isValidElement } from "react";
 
 type UseSlotsArgs<TComponentName extends string> = {
   children: ReactElement | ReactElement[];
@@ -23,6 +16,7 @@ export function useSlots<TComponentName extends string>({
   slotMap,
   required
 }: UseSlotsArgs<TComponentName>) {
+  const slotMapEntries = Object.entries(slotMap);
   const result: ComponentsMap<TComponentName> = {} as ComponentsMap<TComponentName>;
   const childComponentMap: Record<TComponentName, ReactElement | ReactElement[]> =
     {} as ComponentsMap<TComponentName>;
@@ -35,8 +29,8 @@ export function useSlots<TComponentName extends string>({
     if (typeof child.type === "symbol") {
       slotName = "unslottableChildren" as TComponentName;
     } else {
-      const childType = child.type as JSXElementConstructor<unknown>;
-      slotName = childType.name.toLowerCase() as TComponentName;
+      const matchedChildIdx = slotMapEntries.findIndex(([, c]) => c === child.type);
+      slotName = slotMapEntries[matchedChildIdx][0] as TComponentName;
     }
 
     if (slotName in childComponentMap) {
@@ -45,10 +39,10 @@ export function useSlots<TComponentName extends string>({
         childComponentMap[slotName] = [contents];
       }
       const arrayChild = childComponentMap[slotName] as ReactElement[];
-      return arrayChild.push(child);
+      arrayChild.push(child);
+    } else {
+      childComponentMap[slotName] = child;
     }
-
-    childComponentMap[slotName] = child;
   });
 
   for (const slotName in slotMap) {
