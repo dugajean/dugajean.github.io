@@ -1,6 +1,6 @@
 import { Sidebar } from "./sections/Sidebar";
 import { Main } from "./sections/Main";
-import { BoltIcon } from "@heroicons/react/16/solid";
+import { Footer } from "./sections/Footer";
 
 export const App = () => (
   <div className="w-full flex flex-col items-center my-0 md:my-12 print:my-0 gap-4">
@@ -8,16 +8,6 @@ export const App = () => (
       <Sidebar />
       <Main />
     </div>
-    <footer className="text-sm text-slate-600 mx-4 mb-4 print:hidden">
-      Designed and created by Dugi <BoltIcon className="inline w-3 h-3" /> Source code can be found
-      on{" "}
-      <a
-        href="https://github.com/dugajean/dugajean.github.io"
-        target="_blank"
-        className="underline"
-      >
-        GitHub
-      </a>
-    </footer>
+    <Footer />
   </div>
 );
