@@ -4,12 +4,14 @@ export const Sidebar = () => {
   return (
     <section className="bg-indigo-800 bg-opacity-70 w-full md:w-1/4 px-12 py-12 md:py-24 md:rounded-tl-lg md:rounded-bl-lg">
       <div className="flex flex-row-reverse md:flex-col md:sticky md:top-16 md:items-center text-white gap-4">
-        <img
-          loading="lazy"
-          src="/self.webp"
-          alt="Dugi's photo"
-          className="block w-40 md:w-24 lg:w-32 h-40 md:h-24 lg:h-32 rounded-full"
-        />
+        <div className="lg:w-32 h-40">
+          <img
+            loading="lazy"
+            src="/self.webp"
+            alt="Dugi's photo"
+            className="w-40 md:w-24 lg:w-32 h-40 md:h-24 lg:h-32 rounded-full"
+          />
+        </div>
         <div className="flex flex-col gap-8">
           <section>
             <h1 className="text-2xl font-bold">Dugi Surdulli</h1>
@@ -18,12 +20,18 @@ export const Sidebar = () => {
           <section className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <MapPinIcon className="w-5 h-5" />
-              <p className="text-sm">Calgary, Canada</p>
+              <p aria-label="Dugi's location" className="text-sm">
+                Calgary, Canada
+              </p>
             </div>
             <div className="flex items-center gap-2">
               <AtSymbolIcon className="w-5 h-5" />
               <p className="text-sm">
-                <a href="mailto:hello@dugi.dev" className="hover:underline">
+                <a
+                  aria-label="Dugi's email address"
+                  href="mailto:hello@dugi.dev"
+                  className="hover:underline"
+                >
                   hello@dugi.dev
                 </a>
               </p>
