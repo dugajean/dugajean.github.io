@@ -2,7 +2,11 @@ import { PropsWithChildren } from "react";
 import { useSlots } from "../hooks/useSlots";
 import { PropsWithSlots } from "../types/common";
 
-const Experience = ({ children }: PropsWithSlots) => {
+type ExperienceProps = {
+  className?: string;
+};
+
+const Experience = ({ children, className }: PropsWithSlots<ExperienceProps>) => {
   const { slots } = useSlots({
     children,
     slotMap: {
@@ -15,12 +19,12 @@ const Experience = ({ children }: PropsWithSlots) => {
   });
 
   return (
-    <article className="flex flex-col gap-2">
+    <article className={`flex flex-col gap-2 ${className}`}>
       <h3 className="text-lg font-bold">{slots.title}</h3>
-      <p className="text-sm text-gray-400 uppercase">{slots.duration}</p>
+      <div className="text-sm print:text-xs text-gray-400 uppercase">{slots.duration}</div>
       <div className="flex flex-col gap-1">
-        <p>{slots.description}</p>
-        <ul className="list-disc ml-4">{slots.bullet}</ul>
+        <p className="print:text-sm">{slots.description}</p>
+        <ul className="list-disc ml-4 print:text-sm">{slots.bullet}</ul>
       </div>
     </article>
   );

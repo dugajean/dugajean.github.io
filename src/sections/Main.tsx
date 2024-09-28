@@ -1,10 +1,10 @@
 import { Experience } from "../components/Experience";
 
 export const Main = () => (
-  <main className="flex flex-col gap-8 w-full md:w-3/4 pb-12 md:py-24 px-12 md:pr-16">
+  <main className="flex flex-col gap-8 w-full md:w-3/4 pb-12 md:py-24 print:py-12 px-12 md:pr-16">
     <div className="flex flex-col gap-4">
       <h2 className="text-2xl font-bold">Introduction</h2>
-      <p>
+      <p className="print:text-sm">
         I'm an experienced Senior Software Engineer with <strong>10 years</strong> of experience in
         delivering products that serve millions of users. Specializing in frontend architecture and
         engineering leadership, with a strong focus on accessibility, user experience, and creating
@@ -62,7 +62,7 @@ export const Main = () => (
           became <strong>90%</strong> faster, and meeting key delivery goals with our partner.
         </Experience.Bullet>
       </Experience>
-      <Experience>
+      <Experience className="print:mt-32">
         <Experience.Title>Senior Frontend Engineer, Symend, Calgary (Remote)</Experience.Title>
         <Experience.Duration>Aug 2022 - Mar 2023</Experience.Duration>
         <Experience.Description>
