@@ -5,8 +5,9 @@ export const Sidebar = () => {
     <section className="bg-indigo-800 bg-opacity-70 w-full md:w-1/4 px-12 py-12 md:py-24 md:rounded-tl-lg md:rounded-bl-lg">
       <div className="flex flex-row-reverse md:flex-col md:sticky md:top-16 md:items-center text-white gap-4">
         <img
-          src="/self.jpg"
-          alt="Dugi portrait"
+          loading="lazy"
+          src="/self.webp"
+          alt="Dugi's photo"
           className="block w-40 md:w-24 lg:w-32 h-40 md:h-24 lg:h-32 rounded-full"
         />
         <div className="flex flex-col gap-8">
@@ -38,6 +39,8 @@ export const Sidebar = () => {
               <li>PHP</li>
               <li>Go</li>
               <li>Next.js</li>
+              <li>TanStack Query</li>
+              <li>React Hook Form</li>
               <li>Redux</li>
               <li>Jotai</li>
               <li>Tailwind</li>
