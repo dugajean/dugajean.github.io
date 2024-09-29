@@ -20,7 +20,7 @@ export const Sidebar = () => {
           <div className="flex justify-between md:flex-col gap-8">
             <section>
               <h1 className="text-2xl font-bold whitespace-nowrap">{resume.name}</h1>
-              <p className="uppercase text-xs font-light print:font-normal">{resume.title}</p>
+              <p className="uppercase text-xs font-normal">{resume.title}</p>
             </section>
             <section className="flex flex-col gap-2">
               <div className="flex items-center gap-2">

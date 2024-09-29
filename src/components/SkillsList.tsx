@@ -4,13 +4,13 @@ type SkillsListProps = {
 };
 
 export const SkillsList = ({ label, items }: SkillsListProps) => (
-  <dl className="flex gap-2 flex-wrap skills-list font-extralight print:font-normal print:text-sm">
-    <dt className="uppercase print:underline md:text-xs font-semibold">
+  <dl className="flex gap-2 flex-wrap skills-list font-extralight print:font-light print:text-sm">
+    <dt className="uppercase md:text-xs font-semibold">
       {label}
       <span className="md:hidden">:</span>
     </dt>
-    {items.map((framework) => (
-      <dd key={framework}>{framework}</dd>
+    {items.map((item) => (
+      <dd key={item}>{item}</dd>
     ))}
   </dl>
 );

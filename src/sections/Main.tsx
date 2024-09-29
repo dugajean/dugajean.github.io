@@ -15,8 +15,9 @@ export const Main = () => {
       </div>
       <div className="flex flex-col gap-4">
         <h2 className="text-2xl font-bold">Professional History</h2>
-        {resume.experience.map((experience, i) => (
-          <Experience key={experience.company} className={i === 2 ? "print:mt-32" : undefined}>
+        {resume.experience.map((experience) => (
+          //  className={i === 2 ? "print:mt-32" : undefined}
+          <Experience key={experience.company}>
             <Experience.Title>
               {experience.role}, {experience.company}
               {experience.company ? " — " : ""}

@@ -44,9 +44,9 @@
       "endDate": null,
       "description": "As an Independent Contractor, I have provided guidance, leadership, and direct code contributions to various organizations, from SaaS startups, to web agencies.",
       "accomplishments": [
-        "Coordinated the engineering discovery phase of Are Media in behalf of XWP.co. This effort earned the company **$1 million+** of revenue and a long term partnership with Are Media.",
-        "Took initiative in building a frontend starter kit at XWP.co, which was adopted company-wide, speeding up delivery time for frontend work by **40%**.",
-        "At a legal-tech startup, Proof Technologies, I led the effort of transforming the React web app into a monorepo style architecture, converting the code base to TypeScript, introducing a design system and rethinking the API client infrastructure. This achieved tangible results by improving developer experience, greatly integrating the design team into the product workflow, and speeding up new feature development by **50%**."
+        "Coordinated the engineering discovery phase of Are Media on behalf of XWP.co. This earned XWP **$1 million+** of revenue and a long term partnership with Are Media.",
+        "Led creation of frontend starter kit at XWP.co, which was adopted company-wide, speeding up delivery time for frontend work by **40%**.",
+        "Led project of transforming the legacy React web app into a monorepo style architecture. Converted the code base to TypeScript, created a design system library and created a modern the API client. This greatly improved developer experience, increased collaboration with design team, and increased development speed by **50%**."
       ]
     },
     {
@@ -59,8 +59,8 @@
       "accomplishments": [
         "Identified need for scaling our system such that multiple entry points to the SDK can be offered to our users.",
         "Took initiative in creating technical specification documents for multiple approaches to tackle this situation.",
-        "After thorough discussions with the product and engineering team, an approach was agreed upon and I delivered this large scale refactor.",
-        "This resulted in greatly increased developer experience, developing new SDK entry points became **90%** faster, and meeting key delivery goals with our partner."
+        "Thoroughly discussed specs with the product and engineering team. Implemented the spec the teams agreed on.",
+        "This resulted in greatly improved developer experience, developing new SDK entry points became **90%** faster, and meeting key delivery goals with our partner."
       ]
     },
     {
@@ -69,11 +69,11 @@
       "location": "Calgary (Remote)",
       "startDate": "Aug 2022",
       "endDate": "Mar 2023",
-      "description": "As a Senior Frontend Engineer at Symend, I led the development of multiple frontend \"domains\", which was the concept of large scale features within the web application. This meant facilitating feature development with many different stakeholders to ensure smooth delivery for a major migration of our customers.",
+      "description": "As a Senior Frontend Engineer at Symend, I led the multiple frontend projects. Worked with many stakeholders to facilitate feature development to ensure delivery in time for a major migration.",
       "accomplishments": [
         "Noticed a gap in collaboration between frontend team and backend teams, which caused delays in delivery of features.",
         "Discussed this with my team lead, who encouraged me to pursue this further and develop a plan to tackle this problem.",
-        "Wrote documentation on a short term and long term plan to increase collaboration between the teams. Short term plan was to have API design meetings, such that both teams are aligned in what an endpoint should look like and return; Long term plan was to introduce OpenAPI documentation and standardize common query parameters.",
+        "Wrote documentation on a short term and long term plan to increase collaboration between the teams. Short term plan was to have API design meetings, such that teams are aligned in an ednpoint's design; Long term plan was to introduce OpenAPI docs and standardize common query parameters.",
         "This reduced the friction of feature development on both the frontend and backend, which increased productivity and sped up the development of features."
       ]
     },
