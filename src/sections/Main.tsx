@@ -1,7 +1,6 @@
 import Markdown from "markdown-to-jsx";
 import { Experience } from "../components/Experience";
 import { useResume } from "../hooks/useResume";
-import { ReactElement } from "react";
 
 export const Main = () => {
   const resume = useResume();
@@ -17,20 +16,21 @@ export const Main = () => {
       <div className="flex flex-col gap-4">
         <h2 className="text-2xl font-bold">Professional History</h2>
         {resume.experience.map((experience, i) => {
-          const accomplishments: ReactElement[] = experience.accomplishments.map(
-            (accomplishment) => (
-              <Experience.Bullet key={accomplishment}>
-                <Markdown>{accomplishment}</Markdown>
-              </Experience.Bullet>
-            )
-          );
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const accomplishments: any = experience.accomplishments.map((accomplishment) => (
+            <Experience.Bullet key={accomplishment}>
+              <Markdown>{accomplishment}</Markdown>
+            </Experience.Bullet>
+          ));
           return (
             <Experience
               key={experience.company}
               className={i === resume.experience.length - 1 ? "print:mt-32" : undefined}
             >
               <Experience.Title>
-                {experience.role}, {experience.company}, {experience.location}
+                {experience.role}, {experience.company}
+                {experience.company ? ", " : ""}
+                {experience.location}
               </Experience.Title>
               <Experience.Duration>
                 {experience.startDate} - {experience.endDate ?? "Present"}
@@ -38,7 +38,7 @@ export const Main = () => {
               <Experience.Description>
                 <Markdown>{experience.description}</Markdown>
               </Experience.Description>
-              {...accomplishments}
+              {accomplishments}
             </Experience>
           );
         })}
