@@ -15,30 +15,26 @@ export const Main = () => {
       </div>
       <div className="flex flex-col gap-4">
         <h2 className="text-2xl font-bold">Professional History</h2>
-        {resume.experience.map((experience, i) => {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          const accomplishments: any = (experience.accomplishments ?? []).map((accomplishment) => (
-            <Experience.Bullet key={accomplishment}>
-              <Markdown>{accomplishment}</Markdown>
-            </Experience.Bullet>
-          ));
-          return (
-            <Experience key={experience.company} className={i === 2 ? "print:mt-32" : undefined}>
-              <Experience.Title>
-                {experience.role}, {experience.company}
-                {experience.company ? " — " : ""}
-                {experience.location}
-              </Experience.Title>
-              <Experience.Duration>
-                {experience.startDate} - {experience.endDate ?? "Present"}
-              </Experience.Duration>
-              <Experience.Description>
-                <Markdown>{experience.description ?? ""}</Markdown>
-              </Experience.Description>
-              {accomplishments}
-            </Experience>
-          );
-        })}
+        {resume.experience.map((experience, i) => (
+          <Experience key={experience.company} className={i === 2 ? "print:mt-32" : undefined}>
+            <Experience.Title>
+              {experience.role}, {experience.company}
+              {experience.company ? " — " : ""}
+              {experience.location}
+            </Experience.Title>
+            <Experience.Duration>
+              {experience.startDate} - {experience.endDate ?? "Present"}
+            </Experience.Duration>
+            <Experience.Description>
+              <Markdown>{experience.description ?? ""}</Markdown>
+            </Experience.Description>
+            {(experience.accomplishments ?? []).map((accomplishment) => (
+              <Experience.Bullet key={accomplishment}>
+                <Markdown>{accomplishment}</Markdown>
+              </Experience.Bullet>
+            ))}
+          </Experience>
+        ))}
       </div>
       <div className="flex flex-col gap-4">
         <h2 className="text-2xl font-bold">Education</h2>

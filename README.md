@@ -1,50 +1,23 @@
-# React + TypeScript + Vite
+# Welcome to my resume's source code
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My resume is a fairly small React project, but it highlights the way I write code.
 
-Currently, two official plugins are available:
+The stack I'm using for this project:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- Vite
+- Tailwind CSS
+- Prettier
+- HeroIcons
 
-## Expanding the ESLint configuration
+To highlight some decisions I've made:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+I have identified some common patterns, and have separated them into reusable components.
 
-- Configure the top-level `parserOptions` property like this:
+I extracted the resume data into a JSON file, such that there's one source of truth when I need to make adjustments. Then, I load this JSON into a React context, making it available to all child components via the `useResume` hook.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+The `Experience` component uses a slots pattern, where an experience section contains all necessary fields, ie. role, duration, accomplishments, etc. This highlights my use of more advanced React patterns.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Lastly, I have put considerable effort in making this page printable and have it looks just as neat when printing. The only set up necessary in the print dialog is to remove page margins and enable background graphics.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Enjoy!

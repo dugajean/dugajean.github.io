@@ -1,14 +1,14 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, ReactElement } from "react";
 import { useSlots } from "../hooks/useSlots";
-import { PropsWithSlots } from "../types/common";
+import { PropsWithRequiredChildren } from "../types/common";
 
 type ExperienceProps = {
   className?: string;
 };
 
-const Experience = ({ children, className }: PropsWithSlots<ExperienceProps>) => {
+const Experience = ({ children, className }: PropsWithRequiredChildren<ExperienceProps>) => {
   const { slots } = useSlots({
-    children,
+    children: children as ReactElement[],
     slotMap: {
       title: Title,
       duration: Duration,

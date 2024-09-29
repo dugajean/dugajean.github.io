@@ -3,5 +3,5 @@ export type PropsWithRequiredChildren<TProps = object> = TProps & {
 };
 
 export type PropsWithSlots<TProps = object> = TProps & {
-  children: React.ReactElement | React.ReactElement[];
+  children: React.ReactNode;
 };
