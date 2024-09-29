@@ -1,0 +1,87 @@
+{
+  "name": "Dugi Surdulli",
+  "title": "Senior Software Engineer",
+  "location": "Calgary, Canada",
+  "introduction": "I'm an experienced Senior Software Engineer with **10 years** of experience in delivering products that serve millions of users. Specializing in frontend architecture and engineering leadership, with a strong focus on accessibility, user experience, and creating scalable frontend code bases.",
+  "contact": {
+    "email": "hello@dugi.dev",
+    "website": "https://dugi.dev"
+  },
+  "skills": {
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "PHP",
+      "Go"
+    ],
+    "frameworks": [
+      "React",
+      "Next.js",
+      "Laravel",
+      "Tailwind",
+      "TanStack Query",
+      "React Hook Form",
+      "Redux",
+      "Jotai",
+      "Zod",
+      "Vanilla Extract",
+      "Chakra UI"
+    ],
+    "misc": [
+      "Agile",
+      "Scrum",
+      "Git",
+      "JIRA",
+      "Docker"
+    ]
+  },
+  "experience": [
+    {
+      "company": null,
+      "role": "Independent Contractor",
+      "location": "(Remote)",
+      "startDate": "Jan 2018",
+      "endDate": null,
+      "description": "As an Independent Contractor, I have provided guidance, leadership, and direct code contributions to various organizations, from SaaS startups, to web agencies.",
+      "accomplishments": [
+        "Coordinated the engineering discovery phase of Are Media in behalf of XWP.co. This effort earned the company **$1 million+** of revenue and a long term partnership with Are Media.",
+        "Took initiative in building a frontend starter kit at XWP.co, which was adopted company-wide, speeding up delivery time for frontend work by **40%**.",
+        "At a legal-tech startup, Proof Technologies, I led the effort of transforming the React web app into a monorepo style architecture, converting the code base to TypeScript, introducing a design system and rethinking the API client infrastructure. This achieved tangible results by improving developer experience, greatly integrating the design team into the product workflow, and speeding up new feature development by **50%**."
+      ]
+    },
+    {
+      "company": "Tally",
+      "role": "Senior Frontend Engineer",
+      "location": "San Francisco (Remote)",
+      "startDate": "Jul 2023",
+      "endDate": "Apr 2024",
+      "description": "As a Senior Frontend Engineer at Tally, I led the development of various frontend projects within the Web SDK as part of the Web team.",
+      "accomplishments": [
+        "Identified need for scaling our system such that multiple entry points to the SDK can be offered to our users.",
+        "Took initiative in creating technical specification documents for multiple approaches to tackle this situation.",
+        "After thorough discussions with the product and engineering team, an approach was agreed upon and I delivered this large scale refactor.",
+        "This resulted in greatly increased developer experience, developing new SDK entry points became **90%** faster, and meeting key delivery goals with our partner."
+      ]
+    },
+    {
+      "company": "Symend",
+      "role": "Senior Frontend Engineer",
+      "location": "Calgary (Remote)",
+      "startDate": "Aug 2022",
+      "endDate": "Mar 2023",
+      "description": "As a Senior Frontend Engineer at Symend, I led the development of multiple frontend \"domains\", which was the concept of large scale features within the web application. This meant facilitating feature development with many different stakeholders to ensure smooth delivery for a major migration of our customers.",
+      "accomplishments": [
+        "Noticed a gap in collaboration between frontend team and backend teams, which caused delays in delivery of features.",
+        "Discussed this with my team lead, who encouraged me to pursue this further and develop a plan to tackle this problem.",
+        "Wrote documentation on a short term and long term plan to increase collaboration between the teams. Short term plan was to have API design meetings, such that both teams are aligned in what an endpoint should look like and return; Long term plan was to introduce OpenAPI documentation and standardize common query parameters.",
+        "This reduced the friction of feature development on both the frontend and backend, which increased productivity and sped up the development of features."
+      ]
+    }
+  ],
+  "education": {
+    "degree": "BSc in Computer Science",
+    "university": "University of London",
+    "startDate": "Sept 2021",
+    "endDate": null
+  }
+}
