@@ -115,6 +115,6 @@ strong {
   @apply font-semibold;
 }
 
-.skills-list li:not(:last-of-type)::after {
+.skills-list :not(:last-of-type)::after {
   content: " / ";
 }

@@ -42,22 +42,33 @@ export const Sidebar = () => (
         </div>
         <section className="flex flex-col gap-4">
           <h2 className="text-xl font-bold">Skills</h2>
-          <ul className="flex gap-2 flex-wrap skills-list font-extralight print:text-sm">
-            <li>React</li>
-            <li>TypeScript</li>
-            <li>Node.js</li>
-            <li>JavaScript</li>
-            <li>PHP</li>
-            <li>Go</li>
-            <li>Next.js</li>
-            <li>TanStack Query</li>
-            <li>React Hook Form</li>
-            <li>Redux</li>
-            <li>Jotai</li>
-            <li>Zod</li>
-            <li>Tailwind</li>
-            <li>Git</li>
-          </ul>
+          <dl className="flex gap-2 flex-wrap skills-list font-extralight print:text-sm">
+            <dt className="uppercase text-xs font-semibold">Languages</dt>
+            <dd>TypeScript</dd>
+            <dd>JavaScript</dd>
+            <dd>PHP</dd>
+            <dd>Go</dd>
+          </dl>
+          <dl className="flex gap-2 flex-wrap skills-list font-extralight print:text-sm">
+            <dt className="uppercase text-xs font-semibold">Frameworks and tools</dt>
+            <dd>React</dd>
+            <dd>Next.js</dd>
+            <dd>TanStack Query</dd>
+            <dd>React Hook Form</dd>
+            <dd>Redux</dd>
+            <dd>Jotai</dd>
+            <dd>Zod</dd>
+            <dd>Tailwind</dd>
+            <dd>Vanilla Extract</dd>
+            <dd>Chakra UI</dd>
+          </dl>
+          <dl className="flex gap-2 flex-wrap skills-list font-extralight print:text-sm">
+            <dt className="uppercase text-xs font-semibold">Miscellaneous</dt>
+            <dd>Agile</dd>
+            <dd>Scrum</dd>
+            <dd>JIRA</dd>
+            <dd>Git</dd>
+          </dl>
         </section>
       </div>
     </div>
