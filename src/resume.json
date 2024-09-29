@@ -21,11 +21,11 @@
       "Tailwind",
       "TanStack Query",
       "React Hook Form",
+      "Zod",
       "Redux",
       "Jotai",
-      "Zod",
-      "Vanilla Extract",
-      "Chakra UI"
+      "Chakra UI",
+      "Vanilla Extract"
     ],
     "misc": [
       "Agile",
