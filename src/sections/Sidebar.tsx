@@ -5,7 +5,7 @@ export const Sidebar = () => {
   const resume = useResume();
 
   return (
-    <aside className="bg-indigo-800 bg-opacity-70 w-full md:w-1/4 px-12 py-12 print:py-12 md:py-24 md:rounded-tl-lg md:rounded-bl-lg print:rounded-none">
+    <aside className="bg-indigo-800 bg-opacity-70 w-full md:w-1/4 px-12 py-12 print:py-12 md:py-24 lg:rounded-tl-lg lg:rounded-bl-lg print:rounded-none">
       <div className="flex flex-col md:sticky md:top-16 md:items-center text-white gap-4">
         <div className="w-40 md:w-24 lg:w-32 h-40 md:h-24 lg:h-32 self-center">
           <img
@@ -45,19 +45,25 @@ export const Sidebar = () => {
           <section className="flex flex-col gap-4">
             <h2 className="text-xl font-bold">Skills</h2>
             <dl className="flex gap-2 flex-wrap skills-list font-extralight print:text-sm">
-              <dt className="uppercase text-xs font-semibold">Languages</dt>
+              <dt className="uppercase md:text-xs font-semibold">
+                Languages<span className="md:hidden">:</span>
+              </dt>
               {resume.skills.languages.map((language) => (
                 <dd key={language}>{language}</dd>
               ))}
             </dl>
             <dl className="flex gap-2 flex-wrap skills-list font-extralight print:text-sm">
-              <dt className="uppercase text-xs font-semibold">Frameworks and libraries</dt>
+              <dt className="uppercase md:text-xs font-semibold">
+                Frameworks and libraries<span className="md:hidden">:</span>
+              </dt>
               {resume.skills.frameworks.map((framework) => (
                 <dd key={framework}>{framework}</dd>
               ))}
             </dl>
             <dl className="flex gap-2 flex-wrap skills-list font-extralight print:text-sm">
-              <dt className="uppercase text-xs font-semibold">Miscellaneous</dt>
+              <dt className="uppercase md:text-xs font-semibold">
+                Miscellaneous<span className="md:hidden">:</span>
+              </dt>
               {resume.skills.misc.map((misc) => (
                 <dd key={misc}>{misc}</dd>
               ))}
