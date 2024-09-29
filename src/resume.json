@@ -76,6 +76,20 @@
         "Wrote documentation on a short term and long term plan to increase collaboration between the teams. Short term plan was to have API design meetings, such that both teams are aligned in what an endpoint should look like and return; Long term plan was to introduce OpenAPI documentation and standardize common query parameters.",
         "This reduced the friction of feature development on both the frontend and backend, which increased productivity and sped up the development of features."
       ]
+    },
+    {
+      "company": "Necara",
+      "role": "Software Engineer",
+      "location": "Mainz, Germany",
+      "startDate": "Dec 2016",
+      "endDate": "Sept 2018"
+    },
+    {
+      "company": "Manaferra",
+      "role": "Software Engineer",
+      "location": "Prishtina, Kosovo",
+      "startDate": "Oct 2014",
+      "endDate": "Oct 2016"
     }
   ],
   "education": {

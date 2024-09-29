@@ -17,26 +17,23 @@ export const Main = () => {
         <h2 className="text-2xl font-bold">Professional History</h2>
         {resume.experience.map((experience, i) => {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          const accomplishments: any = experience.accomplishments.map((accomplishment) => (
+          const accomplishments: any = (experience.accomplishments ?? []).map((accomplishment) => (
             <Experience.Bullet key={accomplishment}>
               <Markdown>{accomplishment}</Markdown>
             </Experience.Bullet>
           ));
           return (
-            <Experience
-              key={experience.company}
-              className={i === resume.experience.length - 1 ? "print:mt-32" : undefined}
-            >
+            <Experience key={experience.company} className={i === 2 ? "print:mt-32" : undefined}>
               <Experience.Title>
                 {experience.role}, {experience.company}
-                {experience.company ? ", " : ""}
+                {experience.company ? " — " : ""}
                 {experience.location}
               </Experience.Title>
               <Experience.Duration>
                 {experience.startDate} - {experience.endDate ?? "Present"}
               </Experience.Duration>
               <Experience.Description>
-                <Markdown>{experience.description}</Markdown>
+                <Markdown>{experience.description ?? ""}</Markdown>
               </Experience.Description>
               {accomplishments}
             </Experience>

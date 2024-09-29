@@ -97,9 +97,15 @@ body {
   }
 
   .content {
+    height: 200vh;
     background: rgb(238, 174, 202);
-    background: radial-gradient(circle, rgba(238, 174, 202, 0.4) 0%, rgba(148, 187, 233, 0.4) 100%);
+    background: radial-gradient(circle, #ffd7f1 0%, #ecf4ff 100%);
   }
+}
+
+@page {
+  size: letter portrait;
+  margin: 0;
 }
 
 h1,

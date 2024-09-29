@@ -1,5 +1,6 @@
 import { AtSymbolIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { useResume } from "../hooks/useResume";
+import { SkillsList } from "../components/SkillsList";
 
 export const Sidebar = () => {
   const resume = useResume();
@@ -18,7 +19,7 @@ export const Sidebar = () => {
         <div className="flex flex-col gap-8 print:gap-4">
           <div className="flex justify-between md:flex-col gap-8">
             <section>
-              <h1 className="text-2xl font-bold">{resume.name}</h1>
+              <h1 className="text-2xl font-bold whitespace-nowrap">{resume.name}</h1>
               <p className="uppercase text-xs font-light print:font-normal">{resume.title}</p>
             </section>
             <section className="flex flex-col gap-2">
@@ -34,7 +35,7 @@ export const Sidebar = () => {
                   <a
                     aria-label="Dugi's email address"
                     href={`mailto:${resume.contact.email}`}
-                    className="hover:underline"
+                    className="hover:underline print:underline"
                   >
                     {resume.contact.email}
                   </a>
@@ -44,30 +45,9 @@ export const Sidebar = () => {
           </div>
           <section className="flex flex-col gap-4">
             <h2 className="text-xl font-bold">Skills</h2>
-            <dl className="flex gap-2 flex-wrap skills-list font-extralight print:text-sm">
-              <dt className="uppercase md:text-xs font-semibold">
-                Languages<span className="md:hidden">:</span>
-              </dt>
-              {resume.skills.languages.map((language) => (
-                <dd key={language}>{language}</dd>
-              ))}
-            </dl>
-            <dl className="flex gap-2 flex-wrap skills-list font-extralight print:text-sm">
-              <dt className="uppercase md:text-xs font-semibold">
-                Frameworks and libraries<span className="md:hidden">:</span>
-              </dt>
-              {resume.skills.frameworks.map((framework) => (
-                <dd key={framework}>{framework}</dd>
-              ))}
-            </dl>
-            <dl className="flex gap-2 flex-wrap skills-list font-extralight print:text-sm">
-              <dt className="uppercase md:text-xs font-semibold">
-                Miscellaneous<span className="md:hidden">:</span>
-              </dt>
-              {resume.skills.misc.map((misc) => (
-                <dd key={misc}>{misc}</dd>
-              ))}
-            </dl>
+            <SkillsList label="Languages" items={resume.skills.languages} />
+            <SkillsList label="Frameworks and libraries" items={resume.skills.frameworks} />
+            <SkillsList label="Miscellaneous" items={resume.skills.misc} />
           </section>
         </div>
       </div>
