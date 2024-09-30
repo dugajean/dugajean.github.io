@@ -6,7 +6,7 @@ export const Footer = () => (
     <a
       href="https://github.com/dugajean/dugajean.github.io"
       target="_blank"
-      className="underline hover:text-pink-700"
+      className="hover:underline text-pink-700"
     >
       GitHub
     </a>

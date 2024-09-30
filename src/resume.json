@@ -2,7 +2,7 @@
   "name": "Dugi Surdulli",
   "title": "Senior Software Engineer",
   "location": "Calgary, Canada",
-  "introduction": "I'm an experienced Senior Software Engineer with **10 years** of experience in delivering products that serve millions of users. Specializing in frontend architecture and engineering leadership, with a strong focus on accessibility, user experience, and creating scalable frontend code bases.",
+  "introduction": "I'm an experienced Senior Software Engineer with **10 years** of experience in delivering products that serve millions of users. Specializing in frontend architecture and engineering leadership, with a strong focus on accessibility, user experience, and creating scalable frontend codebases.",
   "contact": {
     "email": "hello@dugi.dev",
     "website": "https://dugi.dev"
@@ -46,7 +46,8 @@
       "accomplishments": [
         "Coordinated the engineering discovery phase of Are Media on behalf of XWP.co. This earned XWP **$1 million+** of revenue and a long term partnership with Are Media.",
         "Led creation of frontend starter kit at XWP.co, which was adopted company-wide, speeding up delivery time for frontend work by **40%**.",
-        "Led project of transforming the legacy React web app into a monorepo style architecture. Converted the code base to TypeScript, created a design system library and created a modern the API client. This greatly improved developer experience, increased collaboration with design team, and increased development speed by **50%**."
+        "Led project of transforming the legacy React web app into a monorepo style architecture. Converted the code base to TypeScript, created a design system library and created a modern the API client. This greatly improved developer experience, increased collaboration with design team, and increased development speed by **50%**.",
+        "Designed and implemented a novel solution to a complex React rendering issue where simple SSR wasn't possible. [See blog](https://xwp.co/how-we-built-a-world-first-rendering-solution-for-ofx/)."
       ]
     },
     {
@@ -57,10 +58,8 @@
       "endDate": "Apr 2024",
       "description": "As a Senior Frontend Engineer at Tally, I led the development of various frontend projects within the Web SDK as part of the Web team.",
       "accomplishments": [
-        "Identified need for scaling our system such that multiple entry points to the SDK can be offered to our users.",
-        "Took initiative in creating technical specification documents for multiple approaches to tackle this situation.",
-        "Thoroughly discussed specs with the product and engineering team. Implemented the spec the teams agreed on.",
-        "This resulted in greatly improved developer experience, developing new SDK entry points became **90%** faster, and meeting delivery goals with our partner."
+        "Led the initiative to scale the system by creating multiple SDK entry points, which was essential to building a feature. Developed technical specifications, facilitated team discussions, and implemented the chosen solution, reducing development time for new entry points by **90%** and improving developer experience while meeting partner delivery goals.",
+        "Led the implementation of authentication for the web team, collaborating with stakeholders across mobile platform and backend teams to design a unified solution. Oversaw the integration on the web, ensuring it was secure, dev-friendly, thoroughly tested, and fully matched the specification document."
       ]
     },
     {
@@ -69,12 +68,10 @@
       "location": "Calgary (Remote)",
       "startDate": "Aug 2022",
       "endDate": "Mar 2023",
-      "description": "As a Senior Frontend Engineer at Symend, I led the multiple frontend projects. Worked with many stakeholders to facilitate feature development to ensure delivery in time for a major migration.",
+      "description": "As a Senior Frontend Engineer at Symend, I led the multiple frontend projects. Worked with many stakeholders to facilitate feature development to ensure delivery on time for a major migration.",
       "accomplishments": [
-        "Noticed a gap in collaboration between frontend team and backend teams, which caused delays in delivery of features.",
-        "Discussed this with my team lead, who encouraged me to pursue this further and develop a plan to tackle this problem.",
-        "Wrote documentation on a short term and long term plan to increase collaboration between the teams. Short term plan was to have API design meetings, such that teams are aligned in an ednpoint's design; Long term plan was to introduce OpenAPI docs and standardize common query parameters.",
-        "This reduced the friction in development on both the frontend and backend, which increased productivity and sped up the development of features."
+        "Identified a gap in collaboration between frontend and backend teams that caused feature delays. Developed and documented a short-term plan to introduce API design meetings for better alignment, and a long-term plan to implement **OpenAPI** documentation and standardize query parameters. This improved cross-team communication, reduced development friction, and sped up feature delivery.",
+        "Identified the need to improve code confidence beyond unit and component tests for the frontend team. Led the initiative to advocate for and implement end-to-end testing using **Playwright**, gaining team buy-in and successfully setting up the framework. This resulted in a significant boost in confidence that delivered features were functioning as intended."
       ]
     },
     {

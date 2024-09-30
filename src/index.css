@@ -149,3 +149,7 @@ strong {
 .skills-list :not(:last-of-type)::after {
   content: " / ";
 }
+
+.experience a {
+  @apply hover:underline text-pink-700;
+}

@@ -7,7 +7,7 @@ export const Sidebar = () => {
 
   return (
     <aside className="bg-indigo-800 bg-opacity-70 w-full md:w-1/4 px-12 py-12 print:py-8 md:py-24 lg:rounded-tl-lg lg:rounded-bl-lg print:rounded-none">
-      <div className="flex flex-col md:sticky md:top-16 md:items-center text-white gap-4">
+      <div className="flex flex-col md:sticky print:static md:top-16 md:items-center text-white gap-4">
         <div className="w-40 md:w-24 lg:w-32 h-40 md:h-24 lg:h-32 self-center">
           <img
             loading="lazy"

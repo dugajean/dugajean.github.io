@@ -15,7 +15,7 @@ const Experience = ({ children, className }: PropsWithRequiredChildren<ClassName
   });
 
   return (
-    <article className={`flex flex-col gap-2 ${className}`}>
+    <article className={`experience flex flex-col gap-2 ${className}`}>
       <div className="flex flex-col gap-2 print:gap-1 print:justify-between">
         <h3>{slots.title}</h3>
         <div className="text-sm print:text-xs text-gray-500 uppercase">{slots.duration}</div>
