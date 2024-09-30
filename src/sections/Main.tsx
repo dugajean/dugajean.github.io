@@ -1,19 +1,25 @@
 import Markdown from "markdown-to-jsx";
 import { Experience } from "../components/Experience";
 import { useResume } from "../hooks/useResume";
+import { VFlex } from "../components/Flex";
 
 export const Main = () => {
   const resume = useResume();
 
   return (
-    <main className="flex flex-col gap-8 print:gap-2 w-full md:w-3/4 pb-12 md:py-24 print:py-8 px-12 print:px-6 md:pr-16">
-      <div className="flex flex-col gap-4 print:gap-2">
+    <VFlex
+      as="main"
+      gap="8"
+      printGap="2"
+      className="w-full md:w-3/4 pb-12 md:py-24 print:py-8 px-12 print:px-6 md:pr-16"
+    >
+      <VFlex gap="4" printGap="2">
         <h2>Introduction</h2>
         <p className="print:text-xs">
           <Markdown>{resume.introduction}</Markdown>
         </p>
-      </div>
-      <div className="flex flex-col gap-4 print:gap-2">
+      </VFlex>
+      <VFlex gap="4" printGap="2">
         <h2>Professional History</h2>
         {resume.experience.map((experience) => (
           <Experience key={experience.company}>
@@ -35,15 +41,15 @@ export const Main = () => {
             ))}
           </Experience>
         ))}
-      </div>
-      <div className="flex flex-col gap-4 print:gap-2">
+      </VFlex>
+      <VFlex gap="4" printGap="2">
         <h2>Education</h2>
         <Experience>
           <Experience.Title>
             {resume.education.degree}, {resume.education.university}
           </Experience.Title>
         </Experience>
-      </div>
-    </main>
+      </VFlex>
+    </VFlex>
   );
 };

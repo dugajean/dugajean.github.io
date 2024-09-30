@@ -1,6 +1,7 @@
 import { PropsWithChildren, ReactElement } from "react";
 import { useSlots } from "../hooks/useSlots";
 import { ClassNameProp, PropsWithRequiredChildren } from "../types/common";
+import { VFlex } from "./Flex";
 
 const Experience = ({ children, className }: PropsWithRequiredChildren<ClassNameProp>) => {
   const { slots } = useSlots({
@@ -15,27 +16,25 @@ const Experience = ({ children, className }: PropsWithRequiredChildren<ClassName
   });
 
   return (
-    <article className={`experience flex flex-col gap-2 ${className}`}>
-      <div className="flex flex-col gap-2 print:gap-1">
+    <VFlex as="article" gap="2" className={`experience ${className}`}>
+      <VFlex gap="2" printGap="1">
         <h3>{slots.title}</h3>
         {!!slots.duration && (
           <div className="text-sm print:text-xs text-gray-500 uppercase">{slots.duration}</div>
         )}
-      </div>
+      </VFlex>
       {!!slots.description && !!slots.bullet && (
-        <div className="flex flex-col gap-1">
+        <VFlex gap="1">
           <p className="print:text-xs">{slots.description}</p>
           <ul className="list-disc ml-4 print:text-xs">{slots.bullet}</ul>
-        </div>
+        </VFlex>
       )}
-    </article>
+    </VFlex>
   );
 };
 
 const Title = ({ children }: PropsWithChildren) => <>{children}</>;
-const Description = ({ children, className }: PropsWithChildren<ClassNameProp>) => (
-  <span className={className}>{children}</span>
-);
+const Description = ({ children }: PropsWithChildren) => <>{children}</>;
 const Duration = ({ children }: PropsWithChildren) => <>{children}</>;
 const Bullet = ({ children }: PropsWithChildren) => <li>{children}</li>;
 
