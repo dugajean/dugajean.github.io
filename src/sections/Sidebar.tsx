@@ -44,7 +44,7 @@ export const Sidebar = () => {
             </section>
           </div>
           <section className="flex flex-col gap-4">
-            <h2 className="text-xl font-bold">Skills</h2>
+            <h2>Skills</h2>
             <SkillsList label="Languages" items={resume.skills.languages} />
             <SkillsList label="Frameworks and libraries" items={resume.skills.frameworks} />
             <SkillsList label="Miscellaneous" items={resume.skills.misc} />
