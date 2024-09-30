@@ -75,13 +75,31 @@
     src: url("./assets/fonts/inter-v18-latin-900italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
-  /* mate-regular - latin */
+  /* merriweather-regular - latin */
   @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: "Mate";
+    font-family: "Merriweather";
     font-style: normal;
     font-weight: 400;
-    src: url("./assets/fonts/mate-v17-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url("./assets/fonts/merriweather-v30-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* merriweather-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./assets/fonts/merriweather-v30-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* merriweather-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: 900;
+    src: url("./assets/fonts/merriweather-v30-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 }
 
@@ -98,8 +116,7 @@ body {
 
   .content {
     height: 200vh;
-    background: rgb(238, 174, 202);
-    background: radial-gradient(circle, #ffd7f1 0%, #ecf4ff 100%);
+    background: #fff;
   }
 }
 
@@ -114,7 +131,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Mate", sans-serif;
+  font-family: "Merriweather", sans-serif;
+}
+
+h2 {
+  @apply text-2xl print:text-sm font-bold;
+}
+
+h3 {
+  @apply text-lg print:text-xs font-bold;
 }
 
 strong {

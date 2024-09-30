@@ -6,17 +6,16 @@ export const Main = () => {
   const resume = useResume();
 
   return (
-    <main className="flex flex-col gap-8 w-full md:w-3/4 pb-12 md:py-24 print:py-12 px-12 md:pr-16">
-      <div className="flex flex-col gap-4">
-        <h2 className="text-2xl font-bold">Introduction</h2>
-        <p className="print:text-sm">
+    <main className="flex flex-col gap-8 print:gap-4 w-full md:w-3/4 pb-12 md:py-24 print:py-8 px-12 print:px-6 md:pr-16">
+      <div className="flex flex-col gap-4 print:gap-2">
+        <h2>Introduction</h2>
+        <p className="print:text-xs">
           <Markdown>{resume.introduction}</Markdown>
         </p>
       </div>
       <div className="flex flex-col gap-4">
-        <h2 className="text-2xl font-bold">Professional History</h2>
+        <h2>Professional History</h2>
         {resume.experience.map((experience) => (
-          //  className={i === 2 ? "print:mt-32" : undefined}
           <Experience key={experience.company}>
             <Experience.Title>
               {experience.role}, {experience.company}
@@ -37,15 +36,12 @@ export const Main = () => {
           </Experience>
         ))}
       </div>
-      <div className="flex flex-col gap-4">
-        <h2 className="text-2xl font-bold">Education</h2>
+      <div className="flex flex-col gap-4 print:gap-2">
+        <h2>Education</h2>
         <Experience>
           <Experience.Title>
             {resume.education.degree}, {resume.education.university}
           </Experience.Title>
-          <Experience.Duration>
-            {resume.education.startDate} - {resume.education.endDate ?? "Present"}
-          </Experience.Duration>
         </Experience>
       </div>
     </main>

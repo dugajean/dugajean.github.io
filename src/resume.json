@@ -60,7 +60,7 @@
         "Identified need for scaling our system such that multiple entry points to the SDK can be offered to our users.",
         "Took initiative in creating technical specification documents for multiple approaches to tackle this situation.",
         "Thoroughly discussed specs with the product and engineering team. Implemented the spec the teams agreed on.",
-        "This resulted in greatly improved developer experience, developing new SDK entry points became **90%** faster, and meeting key delivery goals with our partner."
+        "This resulted in greatly improved developer experience, developing new SDK entry points became **90%** faster, and meeting delivery goals with our partner."
       ]
     },
     {
@@ -74,7 +74,7 @@
         "Noticed a gap in collaboration between frontend team and backend teams, which caused delays in delivery of features.",
         "Discussed this with my team lead, who encouraged me to pursue this further and develop a plan to tackle this problem.",
         "Wrote documentation on a short term and long term plan to increase collaboration between the teams. Short term plan was to have API design meetings, such that teams are aligned in an ednpoint's design; Long term plan was to introduce OpenAPI docs and standardize common query parameters.",
-        "This reduced the friction of feature development on both the frontend and backend, which increased productivity and sped up the development of features."
+        "This reduced the friction in development on both the frontend and backend, which increased productivity and sped up the development of features."
       ]
     },
     {
