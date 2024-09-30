@@ -6,7 +6,7 @@ export const Main = () => {
   const resume = useResume();
 
   return (
-    <main className="flex flex-col gap-8 print:gap-0 w-full md:w-3/4 pb-12 md:py-24 print:py-8 px-12 print:px-6 md:pr-16">
+    <main className="flex flex-col gap-8 print:gap-2 w-full md:w-3/4 pb-12 md:py-24 print:py-8 px-12 print:px-6 md:pr-16">
       <div className="flex flex-col gap-4 print:gap-2">
         <h2>Introduction</h2>
         <p className="print:text-xs">
