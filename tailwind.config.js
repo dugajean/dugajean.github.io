@@ -9,5 +9,6 @@ export default {
       }
     }
   },
+  safelist: [{ pattern: /gap-\d/, variants: ["print"] }],
   plugins: []
 };
