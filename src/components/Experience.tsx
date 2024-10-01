@@ -3,7 +3,7 @@ import { useSlots } from "../hooks/useSlots";
 import { ClassNameProp, PropsWithRequiredChildren } from "../types/common";
 import { VFlex } from "./Flex";
 
-const Experience = ({ children, className }: PropsWithRequiredChildren<ClassNameProp>) => {
+const Experience = ({ children, className = "" }: PropsWithRequiredChildren<ClassNameProp>) => {
   const { slots } = useSlots({
     children: children as ReactElement[],
     slotMap: {
@@ -16,7 +16,7 @@ const Experience = ({ children, className }: PropsWithRequiredChildren<ClassName
   });
 
   return (
-    <VFlex as="article" gap="2" className={`experience ${className}`}>
+    <VFlex as="article" gap="2" className={["experience", className].join(" ")}>
       <VFlex gap="2" printGap="1">
         <h3>{slots.title}</h3>
         {!!slots.duration && (

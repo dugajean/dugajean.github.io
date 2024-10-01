@@ -1,67 +1,45 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useMemo } from "react";
 import { ClassNameProp } from "../types/common";
 
-type TailwindGapValues =
-  | "0"
-  | "0.5"
-  | "1"
-  | "1.5"
-  | "2"
-  | "2.5"
-  | "3"
-  | "3.5"
-  | "4"
-  | "5"
-  | "6"
-  | "7"
-  | "8"
-  | "9"
-  | "10"
-  | "11"
-  | "12"
-  | "14"
-  | "16"
-  | "20"
-  | "24"
-  | "28"
-  | "32"
-  | "36"
-  | "40"
-  | "44"
-  | "48"
-  | "52"
-  | "56"
-  | "60"
-  | "64"
-  | "72"
-  | "80"
-  | "96";
-
-type FlexProps = ClassNameProp & {
-  as?: "div" | "section" | "main" | "header" | "footer" | "article" | "aside" | "p" | "dl";
-  direction?: "row" | "row-reverse" | "column" | "column-reverse";
-  gap?: TailwindGapValues;
-  printGap?: TailwindGapValues;
-  justifyContent?:
-    | "flex-start"
-    | "flex-end"
-    | "center"
-    | "space-between"
-    | "space-around"
-    | "space-evenly";
-  alignItems?: "stretch" | "flex-start" | "flex-end" | "center" | "baseline";
-  alignContent?:
-    | "stretch"
-    | "flex-start"
-    | "flex-end"
-    | "center"
-    | "space-between"
-    | "space-around";
-  wrap?: "nowrap" | "wrap" | "wrap-reverse";
+const gapClassMap = {
+  "0": "gap-0",
+  "0.5": "gap-0.5",
+  "1": "gap-1",
+  "1.5": "gap-1.5",
+  "2": "gap-2",
+  "2.5": "gap-2.5",
+  "3": "gap-3",
+  "3.5": "gap-3.5",
+  "4": "gap-4",
+  "5": "gap-5",
+  "6": "gap-6",
+  "7": "gap-7",
+  "8": "gap-8",
+  "9": "gap-9",
+  "10": "gap-10",
+  "11": "gap-11",
+  "12": "gap-12",
+  "14": "gap-14",
+  "16": "gap-16",
+  "20": "gap-20",
+  "24": "gap-24",
+  "28": "gap-28",
+  "32": "gap-32",
+  "36": "gap-36",
+  "40": "gap-40",
+  "44": "gap-44",
+  "48": "gap-48",
+  "52": "gap-52",
+  "56": "gap-56",
+  "60": "gap-60",
+  "64": "gap-64",
+  "72": "gap-72",
+  "80": "gap-80",
+  "96": "gap-96"
 };
 
 const flexboxClassMap = {
-  flexDirection: {
+  direction: {
     row: "flex-row",
     "row-reverse": "flex-row-reverse",
     column: "flex-col",
@@ -97,32 +75,51 @@ const flexboxClassMap = {
   }
 } as const;
 
-const generateGapClass = (gap: TailwindGapValues) => `gap-${gap}` as const;
+type GapValues = keyof typeof gapClassMap;
+
+type FlexProps = ClassNameProp & {
+  as?: "div" | "section" | "main" | "header" | "footer" | "article" | "aside" | "p" | "dl";
+  direction?: keyof (typeof flexboxClassMap)["direction"];
+  gap?: GapValues;
+  printGap?: GapValues;
+  justifyContent?: keyof (typeof flexboxClassMap)["justifyContent"];
+  alignItems?: keyof (typeof flexboxClassMap)["alignItems"];
+  alignContent?: keyof (typeof flexboxClassMap)["alignContent"];
+  wrap?: keyof (typeof flexboxClassMap)["wrap"];
+};
 
 export const Flex = ({
-  as = "div",
   children,
-  className,
-  alignContent,
-  alignItems,
-  direction,
-  wrap,
   gap,
+  wrap,
   printGap,
-  justifyContent
+  direction,
+  alignItems,
+  alignContent,
+  justifyContent,
+  as = "div",
+  className = ""
 }: PropsWithChildren<FlexProps>) => {
   const Container = as;
-  const flexClasses = [];
 
-  if (direction) flexClasses.push(flexboxClassMap.flexDirection[direction]);
-  if (alignContent) flexClasses.push(flexboxClassMap.alignContent[alignContent]);
-  if (alignItems) flexClasses.push(flexboxClassMap.alignItems[alignItems]);
-  if (wrap) flexClasses.push(flexboxClassMap.wrap[wrap]);
-  if (justifyContent) flexClasses.push(flexboxClassMap.justifyContent[justifyContent]);
-  if (gap) flexClasses.push(generateGapClass(gap));
-  if (printGap) flexClasses.push(`print:${generateGapClass(printGap)}`);
+  const joinedClasses = useMemo(() => {
+    const flexClasses = ["flex", className];
 
-  return <Container className={`flex ${flexClasses.join(" ")} ${className}`}>{children}</Container>;
+    if (direction) flexClasses.push(flexboxClassMap.direction[direction]);
+    if (alignContent) flexClasses.push(flexboxClassMap.alignContent[alignContent]);
+    if (alignItems) flexClasses.push(flexboxClassMap.alignItems[alignItems]);
+    if (wrap) flexClasses.push(flexboxClassMap.wrap[wrap]);
+    if (justifyContent) flexClasses.push(flexboxClassMap.justifyContent[justifyContent]);
+    if (gap) flexClasses.push(gapClassMap[gap]);
+    if (printGap) flexClasses.push(`print:${gapClassMap[printGap]}`);
+
+    return flexClasses
+      .filter(Boolean)
+      .map((s) => s.trim())
+      .join(" ");
+  }, [alignContent, alignItems, className, direction, gap, justifyContent, printGap, wrap]);
+
+  return <Container className={joinedClasses}>{children}</Container>;
 };
 
 export const VFlex = ({ ...props }: PropsWithChildren<Omit<FlexProps, "direction">>) => (
