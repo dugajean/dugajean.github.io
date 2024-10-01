@@ -20,7 +20,7 @@ export const Main = () => {
         </p>
       </VFlex>
       <VFlex gap="4" printGap="2">
-        <h2>Professional History</h2>
+        <h2>Professional Experience</h2>
         {resume.experience.map((experience) => (
           <Experience key={experience.company}>
             <Experience.Title>
