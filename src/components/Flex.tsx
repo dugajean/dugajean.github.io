@@ -77,15 +77,18 @@ const flexboxClassMap = {
 
 type GapValues = keyof typeof gapClassMap;
 
+type FlexboxAttrsMap<TAttr extends keyof typeof flexboxClassMap> =
+  keyof (typeof flexboxClassMap)[TAttr];
+
 type FlexProps = ClassNameProp & {
   as?: "div" | "section" | "main" | "header" | "footer" | "article" | "aside" | "p" | "dl";
-  direction?: keyof (typeof flexboxClassMap)["direction"];
+  direction?: FlexboxAttrsMap<"direction">;
   gap?: GapValues;
   printGap?: GapValues;
-  justifyContent?: keyof (typeof flexboxClassMap)["justifyContent"];
-  alignItems?: keyof (typeof flexboxClassMap)["alignItems"];
-  alignContent?: keyof (typeof flexboxClassMap)["alignContent"];
-  wrap?: keyof (typeof flexboxClassMap)["wrap"];
+  justifyContent?: FlexboxAttrsMap<"justifyContent">;
+  alignItems?: FlexboxAttrsMap<"alignItems">;
+  alignContent?: FlexboxAttrsMap<"alignContent">;
+  wrap?: FlexboxAttrsMap<"wrap">;
 };
 
 export const Flex = ({
