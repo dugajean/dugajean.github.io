@@ -47,12 +47,7 @@ export const Sidebar = () => {
               <InfoSlot
                 Icon={<LinkedinIcon className="w-4 h-4" />}
                 href={resume.contact.linkedin}
-                label={
-                  <>
-                    <span className="print:hidden">LinkedIn</span>
-                    <span className="hidden print:block">in/dsur</span>
-                  </>
-                }
+                label="LinkedIn"
               />
             </VFlex>
           </HFlex>
