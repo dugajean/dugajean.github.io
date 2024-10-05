@@ -31,17 +31,21 @@ export const Sidebar = () => {
               printGap="2"
               className="print:flex-row print:justify-center print:items-center"
             >
-              <InfoSlot Icon={MapPinIcon} label={resume.location} ariaLabel="Location" />
+              <InfoSlot
+                Icon={<MapPinIcon className="w-5 h-5" />}
+                label={resume.location}
+                ariaLabel="Location"
+              />
               <p className="hidden print:block text-xs">/</p>
               <InfoSlot
-                Icon={AtSymbolIcon}
+                Icon={<AtSymbolIcon className="w-5 h-5" />}
                 label={resume.contact.email}
                 ariaLabel="Email"
                 href={`mailto:${resume.contact.email}`}
               />
               <p className="hidden print:block text-xs">/</p>
               <InfoSlot
-                Icon={LinkedinIcon}
+                Icon={<LinkedinIcon className="w-4 h-4" />}
                 href={resume.contact.linkedin}
                 label={
                   <>
