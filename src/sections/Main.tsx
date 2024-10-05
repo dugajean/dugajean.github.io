@@ -10,7 +10,7 @@ export const Main = () => {
     <VFlex
       as="main"
       gap="8"
-      printGap="2"
+      printGap="4"
       className="w-full md:w-3/4 pb-12 md:py-24 print:py-8 px-12 print:px-6 md:pr-16 text-slate-900"
     >
       <VFlex gap="4" printGap="2">
@@ -19,7 +19,7 @@ export const Main = () => {
           <Markdown>{resume.introduction}</Markdown>
         </p>
       </VFlex>
-      <VFlex gap="4" printGap="2">
+      <VFlex gap="4">
         <h2>Professional Experience</h2>
         {resume.experience.map((experience) => (
           <Experience key={experience.company}>

@@ -10,9 +10,9 @@ export const SkillsList = ({ label, items }: SkillsListProps) => (
     as="dl"
     gap="2"
     wrap="wrap"
-    className="skills-list font-extralight print:font-light print:text-sm gap"
+    className="skills-list font-extralight print:font-light print:text-xs gap"
   >
-    <dt className="uppercase md:text-xs font-semibold w-full">{label}</dt>
+    <dt className="uppercase md:text-xs print:text-xs font-semibold w-full">{label}</dt>
     {items.map((item) => (
       <dd key={item}>{item}</dd>
     ))}

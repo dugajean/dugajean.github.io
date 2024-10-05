@@ -32,7 +32,7 @@ export const Sidebar = () => {
               </HFlex>
               <HFlex gap="2" alignItems="center">
                 <AtSymbolIcon className="w-5 h-5" />
-                <p className="text-sm">
+                <p className="text-sm print:text-xs">
                   <a
                     aria-label="Dugi's email address"
                     href={`mailto:${resume.contact.email}`}

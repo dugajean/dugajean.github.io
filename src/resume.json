@@ -2,7 +2,7 @@
   "name": "Dugi Surdulli",
   "title": "Senior Software Engineer",
   "location": "Calgary, Canada",
-  "introduction": "I am an experienced Senior Software Engineer with **10 years** of expertise in delivering high-impact products to millions of users across diverse industries, including fintech, legal-tech, insurance-tech, and web agencies. I specialize in frontend architecture and engineering leadership, with a strong focus on accessibility, user experience, and building scalable, maintainable codebases.",
+  "introduction": "I am an experienced Senior Software Engineer with **10 years** of expertise in delivering high-impact products to millions of users across diverse industries, including fintech, legal-tech, insurance-tech, and web agencies. I specialize in frontend architecture and engineering leadership, with a strong focus on accessibility, UX, and building scalable codebases.",
   "contact": {
     "email": "hello@dugi.dev",
     "website": "https://dugi.dev"
@@ -17,6 +17,7 @@
     "frameworks": [
       "React",
       "Next.js",
+      "Vue",
       "Laravel",
       "Tailwind",
       "TanStack Query",
@@ -44,10 +45,12 @@
       "endDate": null,
       "description": "As an Independent Contractor, I have provided guidance, leadership, and direct code contributions to various organizations, from SaaS startups, to web agencies.",
       "accomplishments": [
-        "Coordinated the engineering discovery phase of Are Media on behalf of XWP.co. This earned XWP **$1 million+** of revenue and a long term partnership with Are Media.",
-        "Led creation of frontend starter kit at XWP.co, which was adopted company-wide, speeding up delivery time for frontend work by **40%**.",
-        "Led project of transforming the legacy React web app into a monorepo style architecture. Converted the code base to TypeScript, created a design system library and created a modern the API client. This greatly improved developer experience, increased collaboration with design team, and increased development speed by **50%**.",
-        "Designed and implemented a novel solution to a complex React rendering issue where simple SSR wasn't possible. [See blog](https://xwp.co/how-we-built-a-world-first-rendering-solution-for-ofx/)."
+        "Led engineering discovery at XWP for Are Media, securing **$1M+** in revenue and a long-term partnership.",
+        "Developed company-wide frontend starter kit at XWP, improving delivery time by **40%**.",
+        "Transformed a legacy React app into a monorepo with TypeScript, boosting development speed by **50%**.",
+        "Led the creation of design system libraries, which streamlined the creation of apps.",
+        "Designed and implemented a novel solution to a complex React rendering issue where simple SSR wasn't possible. [See blog](https://xwp.co/how-we-built-a-world-first-rendering-solution-for-ofx/).",
+        "Skills: TypeScript, JavaScript, HTML, CSS, React, Next.js, Storybook, accessibility, web performance, design systems."
       ]
     },
     {
@@ -58,8 +61,10 @@
       "endDate": "Apr 2024",
       "description": "As a Senior Frontend Engineer at Tally, I led the development of various frontend projects within the Web SDK as part of the Web team.",
       "accomplishments": [
-        "Led the initiative to scale the system by creating multiple SDK entry points, which was essential to building a feature. Developed technical specifications, facilitated team discussions, and implemented the chosen solution, reducing development time for new entry points by **90%** and improving developer experience while meeting partner delivery goals.",
-        "Led the implementation of authentication for the web team, collaborating with stakeholders across mobile platform and backend teams to design a unified solution. Oversaw the integration on the web, ensuring it was secure, dev-friendly, thoroughly tested, and fully matched the specification document."
+        "Scaled Web SDK with multiple entry points, reducing new development time by **90%** for similar features.",
+        "Led web authentication integration, collaborating across mobile, backend, and web teams.",
+        "Led end-to-end feature development, collaborating with stakeholders to define specifications and delegating tasks to mid-level engineers, improving team efficiency by **30%**.",
+        "Skills: TypeScript, HTML, CSS, React, Next.js, SDK development, iframe API, design system, accessibility."
       ]
     },
     {
@@ -70,8 +75,10 @@
       "endDate": "Mar 2023",
       "description": "As a Senior Frontend Engineer at Symend, I led the multiple frontend projects. Worked with many stakeholders to facilitate feature development to ensure delivery on time for a major migration.",
       "accomplishments": [
-        "Identified a gap in collaboration between frontend and backend teams that caused feature delays. Developed and documented a short-term plan to introduce API design meetings for better alignment, and a long-term plan to implement **OpenAPI** documentation and standardize query parameters. This improved cross-team communication, reduced development friction, and sped up feature delivery.",
-        "Identified the need to improve code confidence beyond unit and component tests for the frontend team. Led the initiative to advocate for and implement end-to-end testing using **Playwright**, gaining team buy-in and successfully setting up the framework. This resulted in a significant boost in confidence that delivered features were functioning as intended."
+        "Improved cross-team collaboration with API design meetings and OpenAPI documentation, speeding up feature delivery.",
+        "Implemented **Playwright** for end-to-end testing, enhancing code confidence and reducing regressions.",
+        "Led feature development, collaborating with stakeholders to create specs and deliver high-quality solutions.",
+        "Skills: TypeScript, HTML, CSS, React, Vite, Playwright, multi-tenancy, msw."
       ]
     },
     {
