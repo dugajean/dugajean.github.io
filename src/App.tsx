@@ -6,7 +6,11 @@ import { VFlex } from "./components/Flex";
 
 export const App = () => (
   <ResumeProvider>
-    <VFlex alignItems="center" gap="4" className="w-full my-0 lg:my-12 print:my-0">
+    <VFlex
+      alignItems="center"
+      gap="4"
+      className="w-full my-0 lg:my-12 print:my-0 overflow-hidden sm:overflow-visible"
+    >
       <VFlex
         gap="12"
         printGap="4"

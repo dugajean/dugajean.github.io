@@ -60,7 +60,7 @@
       "location": "San Francisco (Remote)",
       "startDate": "Jul 2023",
       "endDate": "Apr 2024",
-      "description": "As a Senior Frontend Engineer at Tally, I led the development of various frontend projects within the Web SDK as part of the Web team.",
+      "description": "As a Senior Frontend Engineer at Tally, I led the development of various frontend projects within the Web SDK during a business pivot from B2C to B2B.",
       "accomplishments": [
         "Scaled Web SDK with multiple entry points, reducing new development time by **90%** for similar features.",
         "Led web authentication integration, collaborating across mobile, backend, and web teams.",
@@ -74,11 +74,11 @@
       "location": "Calgary (Remote)",
       "startDate": "Aug 2022",
       "endDate": "Mar 2023",
-      "description": "As a Senior Frontend Engineer at Symend, I led the multiple frontend projects. Worked with many stakeholders to facilitate feature development to ensure delivery on time for a major migration.",
+      "description": "As a Senior Frontend Engineer at Symend, I led multiple frontend projects and delivered them successfully. Worked with many stakeholders to facilitate feature development to ensure delivery on time for a major migration.",
       "accomplishments": [
-        "Improved cross-team collaboration with API design meetings and OpenAPI documentation.",
-        "Implemented **Playwright** for end-to-end testing, enhancing code confidence and reducing regressions.",
-        "Led feature development, collaborating with stakeholders to create specs and deliver high-quality solutions.",
+        "Improved cross-team collaboration with API design meetings and **OpenAPI** documentation.",
+        "Implemented **Playwright** for end-to-end testing, enhancing code confidence and reducing regressions significantly.",
+        "Led feature development, working closely with stakeholders to create clear specs and deliver effective, high-quality solutions.",
         "Skills: TypeScript, HTML, CSS, React, Vite, Playwright, multi-tenancy, msw."
       ]
     },

@@ -18,7 +18,7 @@ export const InfoSlot = ({ Icon, href, label, ariaLabel }: InfoSlotProps) => {
         <TextElement
           href={href}
           aria-label={ariaLabel}
-          className={`${href ? "underline print:text-pink-700" : ""}`}
+          className={`${href ? "underline print:text-pink-700" : ""} whitespace-nowrap`}
         >
           {label}
         </TextElement>

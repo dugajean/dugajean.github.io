@@ -20,7 +20,7 @@ export const Sidebar = () => {
           />
         </div>
         <VFlex gap="8" printGap="0">
-          <HFlex gap="8" printGap="2" className="md:flex-col print:flex-col">
+          <HFlex gap="8" printGap="2" className="md:flex-col print:flex-col justify-between">
             <section className="print:text-center">
               <h1 className="text-2xl font-bold whitespace-nowrap">{resume.name}</h1>
               <p className="uppercase text-xs font-normal">{resume.title}</p>
