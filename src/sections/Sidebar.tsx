@@ -7,8 +7,8 @@ export const Sidebar = () => {
   const resume = useResume();
 
   return (
-    <aside className="bg-indigo-800 bg-opacity-70 w-full md:w-1/4 px-12 py-12 print:py-8 md:py-24 lg:rounded-tl-lg lg:rounded-bl-lg print:rounded-none">
-      <VFlex gap="4" className="md:sticky print:static md:top-16 md:items-center text-white">
+    <aside className="bg-indigo-800 text-white print:bg-white print:text-slate-900 bg-opacity-70 w-full md:w-1/4 print:w-full px-12 py-12 print:py-0 print:px-0 md:py-24 lg:rounded-tl-lg lg:rounded-bl-lg print:rounded-none">
+      <VFlex gap="4" className="md:sticky print:static md:top-16 md:items-center">
         <div className="w-40 md:w-24 lg:w-32 h-40 md:h-24 lg:h-32 self-center print:hidden">
           <img
             loading="lazy"
@@ -17,16 +17,16 @@ export const Sidebar = () => {
             className="block w-full h-full rounded-full"
           />
         </div>
-        <VFlex gap="8" printGap="4">
-          <HFlex justifyContent="space-between" gap="8" className="md:flex-col">
-            <section>
+        <VFlex gap="8" printGap="0">
+          <HFlex gap="8" printGap="2" className="md:flex-col print:flex-col">
+            <section className="print:text-center">
               <h1 className="text-2xl font-bold whitespace-nowrap">{resume.name}</h1>
               <p className="uppercase text-xs font-normal">{resume.title}</p>
             </section>
-            <VFlex as="section" gap="2">
+            <VFlex as="section" gap="2" className="print:flex-row print:justify-center">
               <HFlex gap="2" alignItems="center">
                 <MapPinIcon className="w-5 h-5" />
-                <p aria-label="Dugi's location" className="text-sm whitespace-nowrap">
+                <p aria-label="Dugi's location" className="text-sm print:text-xs whitespace-nowrap">
                   {resume.location}
                 </p>
               </HFlex>
@@ -36,7 +36,7 @@ export const Sidebar = () => {
                   <a
                     aria-label="Dugi's email address"
                     href={`mailto:${resume.contact.email}`}
-                    className="hover:underline print:underline"
+                    className="hover:underline print:underline print:text-pink-700"
                   >
                     {resume.contact.email}
                   </a>
@@ -44,7 +44,7 @@ export const Sidebar = () => {
               </HFlex>
             </VFlex>
           </HFlex>
-          <VFlex as="section" gap="4">
+          <VFlex as="section" gap="4" className="print:hidden">
             <h2>Skills</h2>
             <SkillsList label="Languages" items={resume.skills.languages} />
             <SkillsList label="Frameworks and libraries" items={resume.skills.frameworks} />

@@ -11,7 +11,7 @@ export const Main = () => {
       as="main"
       gap="8"
       printGap="4"
-      className="w-full md:w-3/4 pb-12 md:py-24 print:py-8 px-12 print:px-6 md:pr-16 text-slate-900"
+      className="w-full md:w-3/4 print:w-full pb-12 md:py-24 print:py-0 px-12 print:px-0 md:pr-16 text-slate-900"
     >
       <VFlex gap="4" printGap="2">
         <h2>Introduction</h2>

@@ -1,11 +1,11 @@
 {
-  "name": "Dugi Surdulli",
+  "name": "Doug Surdulli",
   "title": "Senior Software Engineer",
   "location": "Calgary, Canada",
   "introduction": "I am an experienced Senior Software Engineer with **10 years** of expertise in delivering high-impact products to millions of users across diverse industries, including fintech, legal-tech, insurance-tech, and web agencies. I specialize in frontend architecture and engineering leadership, with a strong focus on accessibility, UX, and building scalable codebases.",
   "contact": {
-    "email": "hello@dugi.dev",
-    "website": "https://dugi.dev"
+    "email": "hello@dsur.dev",
+    "website": "https://dsur.dev"
   },
   "skills": {
     "languages": [
@@ -49,7 +49,7 @@
         "Developed company-wide frontend starter kit at XWP, improving delivery time by **40%**.",
         "Transformed a legacy React app into a monorepo with TypeScript, boosting development speed by **50%**.",
         "Led the creation of design system libraries, which streamlined the creation of apps.",
-        "Designed and implemented a novel solution to a complex React rendering issue where simple SSR wasn't possible. [See blog](https://xwp.co/how-we-built-a-world-first-rendering-solution-for-ofx/).",
+        "Invented a novel solution to a complex React rendering issue where simple SSR wasn't possible. [See blog](https://xwp.co/how-we-built-a-world-first-rendering-solution-for-ofx/).",
         "Skills: TypeScript, JavaScript, HTML, CSS, React, Next.js, Storybook, accessibility, web performance, design systems."
       ]
     },
@@ -75,7 +75,7 @@
       "endDate": "Mar 2023",
       "description": "As a Senior Frontend Engineer at Symend, I led the multiple frontend projects. Worked with many stakeholders to facilitate feature development to ensure delivery on time for a major migration.",
       "accomplishments": [
-        "Improved cross-team collaboration with API design meetings and OpenAPI documentation, speeding up feature delivery.",
+        "Improved cross-team collaboration with API design meetings and OpenAPI documentation.",
         "Implemented **Playwright** for end-to-end testing, enhancing code confidence and reducing regressions.",
         "Led feature development, collaborating with stakeholders to create specs and deliver high-quality solutions.",
         "Skills: TypeScript, HTML, CSS, React, Vite, Playwright, multi-tenancy, msw."

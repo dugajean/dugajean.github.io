@@ -118,11 +118,14 @@ body {
     height: 100vh;
     background: #fff;
   }
+
+  h2 {
+    @apply print:border-b print:border-slate-700;
+  }
 }
 
 @page {
   size: letter portrait;
-  margin: 0;
 }
 
 h1,

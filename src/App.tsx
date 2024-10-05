@@ -10,7 +10,7 @@ export const App = () => (
       <VFlex
         gap="12"
         printGap="4"
-        className="content md:flex-row min-w-96 max-w-screen-lg bg-white bg-opacity-70 lg:rounded-lg print:rounded-none shadow-xl print:shadow-none"
+        className="content md:flex-row print:flex-col min-w-96 max-w-screen-lg bg-white bg-opacity-70 lg:rounded-lg print:rounded-none shadow-xl print:shadow-none"
       >
         <Sidebar />
         <Main />
