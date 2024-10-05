@@ -1,4 +1,5 @@
 import { AtSymbolIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import LinkedinIcon from "../assets/svg/linkedin.svg?react";
 import { useResume } from "../hooks/useResume";
 import { SkillsList } from "../components/SkillsList";
 import { HFlex, VFlex } from "../components/Flex";
@@ -23,22 +24,40 @@ export const Sidebar = () => {
               <h1 className="text-2xl font-bold whitespace-nowrap">{resume.name}</h1>
               <p className="uppercase text-xs font-normal">{resume.title}</p>
             </section>
-            <VFlex as="section" gap="2" className="print:flex-row print:justify-center">
+            <VFlex
+              as="section"
+              gap="2"
+              className="print:flex-row print:justify-center print:items-center"
+            >
               <HFlex gap="2" alignItems="center">
                 <MapPinIcon className="w-5 h-5" />
                 <p aria-label="Dugi's location" className="text-sm print:text-xs whitespace-nowrap">
                   {resume.location}
                 </p>
               </HFlex>
+              <p className="hidden print:block text-xs">/</p>
               <HFlex gap="2" alignItems="center">
                 <AtSymbolIcon className="w-5 h-5" />
                 <p className="text-sm print:text-xs">
                   <a
                     aria-label="Dugi's email address"
                     href={`mailto:${resume.contact.email}`}
-                    className="hover:underline print:underline print:text-pink-700"
+                    className="underline print:text-pink-700"
                   >
                     {resume.contact.email}
+                  </a>
+                </p>
+              </HFlex>
+              <p className="hidden print:block text-xs">/</p>
+              <HFlex gap="2" alignItems="center">
+                <LinkedinIcon className="w-5 h-5 fill-white print:fill-slate-900" />
+                <p className="text-sm print:text-xs">
+                  <a
+                    aria-label="Dugi's LinkedIn"
+                    href="https://www.linkedin.com/in/dsur/"
+                    className="underline print:text-pink-700"
+                  >
+                    LinkedIn
                   </a>
                 </p>
               </HFlex>
