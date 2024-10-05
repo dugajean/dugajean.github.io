@@ -3,6 +3,7 @@ import LinkedinIcon from "../assets/svg/linkedin.svg?react";
 import { useResume } from "../hooks/useResume";
 import { SkillsList } from "../components/SkillsList";
 import { HFlex, VFlex } from "../components/Flex";
+import { InfoSlot } from "../components/InfoSlot";
 
 export const Sidebar = () => {
   const resume = useResume();
@@ -30,37 +31,25 @@ export const Sidebar = () => {
               printGap="2"
               className="print:flex-row print:justify-center print:items-center"
             >
-              <HFlex gap="2" alignItems="center">
-                <MapPinIcon className="w-5 h-5" />
-                <p aria-label="Dugi's location" className="text-sm print:text-xs whitespace-nowrap">
-                  {resume.location}
-                </p>
-              </HFlex>
+              <InfoSlot Icon={MapPinIcon} label={resume.location} ariaLabel="Location" />
               <p className="hidden print:block text-xs">/</p>
-              <HFlex gap="2" alignItems="center" className="hover:text-amber-400">
-                <AtSymbolIcon className="w-5 h-5" />
-                <p className="text-sm print:text-xs">
-                  <a
-                    aria-label="Dugi's email address"
-                    href={`mailto:${resume.contact.email}`}
-                    className="underline print:text-pink-700"
-                  >
-                    {resume.contact.email}
-                  </a>
-                </p>
-              </HFlex>
+              <InfoSlot
+                Icon={AtSymbolIcon}
+                label={resume.contact.email}
+                ariaLabel="Email"
+                href={`mailto:${resume.contact.email}`}
+              />
               <p className="hidden print:block text-xs">/</p>
-              <HFlex gap="2" alignItems="center" className="hover:text-amber-400">
-                <LinkedinIcon className="w-5 h-5 fill-current" />
-                <p className="text-sm print:text-xs">
-                  <a
-                    href="https://www.linkedin.com/in/dsur/"
-                    className="underline print:text-pink-700"
-                  >
-                    LinkedIn
-                  </a>
-                </p>
-              </HFlex>
+              <InfoSlot
+                Icon={LinkedinIcon}
+                href={resume.contact.linkedin}
+                label={
+                  <>
+                    <span className="print:hidden">LinkedIn</span>
+                    <span className="print:block">in/dsur</span>
+                  </>
+                }
+              />
             </VFlex>
           </HFlex>
           <VFlex as="section" gap="4" className="print:hidden">
