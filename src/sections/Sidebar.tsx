@@ -26,7 +26,8 @@ export const Sidebar = () => {
             </section>
             <VFlex
               as="section"
-              gap="2"
+              gap="3"
+              printGap="2"
               className="print:flex-row print:justify-center print:items-center"
             >
               <HFlex gap="2" alignItems="center">
@@ -36,7 +37,7 @@ export const Sidebar = () => {
                 </p>
               </HFlex>
               <p className="hidden print:block text-xs">/</p>
-              <HFlex gap="2" alignItems="center">
+              <HFlex gap="2" alignItems="center" className="hover:text-amber-400">
                 <AtSymbolIcon className="w-5 h-5" />
                 <p className="text-sm print:text-xs">
                   <a
@@ -49,11 +50,10 @@ export const Sidebar = () => {
                 </p>
               </HFlex>
               <p className="hidden print:block text-xs">/</p>
-              <HFlex gap="2" alignItems="center">
-                <LinkedinIcon className="w-5 h-5 fill-white print:fill-slate-900" />
+              <HFlex gap="2" alignItems="center" className="hover:text-amber-400">
+                <LinkedinIcon className="w-5 h-5 fill-current" />
                 <p className="text-sm print:text-xs">
                   <a
-                    aria-label="Dugi's LinkedIn"
                     href="https://www.linkedin.com/in/dsur/"
                     className="underline print:text-pink-700"
                   >
