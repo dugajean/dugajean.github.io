@@ -46,7 +46,7 @@ export const Sidebar = () => {
                 label={
                   <>
                     <span className="print:hidden">LinkedIn</span>
-                    <span className="print:block">in/dsur</span>
+                    <span className="hidden print:block">in/dsur</span>
                   </>
                 }
               />
